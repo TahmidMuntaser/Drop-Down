@@ -11,17 +11,18 @@
 body{
     font-family: 'Montserrat', sans-serif;
     background:  #f1e8e6;
+    color: #f1e8e6;
 }
 
 .header{
-    background: #ad44f3;
+    background: #361d32;
     width: 100%;
     height: 70px;
     position: fixed;
 }
 
 .sidebar{
-    background: #ad44f3;
+    background: #361d32;
     width: 300px;
     height: 100%;
     position: fixed;
@@ -32,4 +33,20 @@ body{
 .profile{
     text-align: center;
     padding: 20px;
+}
+
+
+.menu li a{
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    text-transform: uppercase;
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.menu li:hover{
+    background: #f1e8e6;
+    color: #361d32;
+    transition: all 0.3s;
 }
