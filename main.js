@@ -27,3 +27,21 @@ document.getElementById('toggle-sidebar').addEventListener('change', function() 
 //     var sidebarOpen = document.getElementById('sidebar').classList.contains('open');
 //     document.getElementById('checkbox').checked = sidebarOpen;
 // });
+
+
+
+
+//not select the same page
+
+var sidebarLinks = document.querySelectorAll('.sidebar .menu a');
+
+for (var i = 0; i < sidebarLinks.length; i++) {
+   
+    sidebarLinks[i].addEventListener('click', function(event) {
+        var currentUrl = window.location.href.split('#')[0];
+        var clickedUrl = this.href.split('#')[0];
+        if (currentUrl === clickedUrl) {
+            event.preventDefault();
+        }
+    });
+}
