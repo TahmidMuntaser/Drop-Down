@@ -22,7 +22,7 @@ document.getElementById('toggle-sidebar').addEventListener('change', function() 
 // });
 
 
-// Event listener for sidebar toggle
+// // Event listener for sidebar toggle
 // document.getElementById('toggle-sidebar').addEventListener('click', function() {
 //     var sidebarOpen = document.getElementById('sidebar').classList.contains('open');
 //     document.getElementById('checkbox').checked = sidebarOpen;
@@ -45,3 +45,14 @@ for (var i = 0; i < sidebarLinks.length; i++) {
         }
     });
 }
+
+
+
+// remove the causes the page to jump to the top when clicked.
+
+document.querySelector('.toggle-icon').addEventListener('click', function(event) {
+    event.preventDefault();
+    var checkbox = document.querySelector('#toggle-sidebar');
+    checkbox.checked = !checkbox.checked;
+    document.querySelector('.sidebar').classList.toggle('active');
+});
